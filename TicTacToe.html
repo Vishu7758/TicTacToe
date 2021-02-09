@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My AngularJS Events</title>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
+	<script src="angular/angular.min.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+
+    <style>
+        .customBorder {
+            border: solid 1px;
+            border-collapse: collapse;
+            height: 100px;
+            width: 100px;
+            font-size: 65px;
+            background-color: #00ffff69;      
+        }
+
+        .res {
+            margin-top: 25px;
+            font-size: xx-large;
+        }
+    </style>
+
+    <script>
+        function pageReload() {
+            location.reload(true);
+        }
+    </script>
+</head>
+<body style="background-image: url('img/Background.jpeg'); background-repeat: no-repeat; background-size: cover;">
+
+
+	<!-- Represting 3 by 3 grid for tic tac toe -->
+    <div ng-app="myApp" ng-controller="myController">
+        <div class="container-fluid" style="position: relative; margin: 0; padding-top: calc(10vh); height: calc(100vh); background-color: #00000045;">
+            <div class="row text-center d-flex justify-content-center">
+                <div class="col-lg-4 customBorder" ng-click="myFun(0)">
+                    <b> {{ PlayerValue[0] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(1)">
+                    <b> {{ PlayerValue[1] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(2)">
+                    <b> {{ PlayerValue[2] }} </b>
+                </div>
+            </div>
+
+            <div class="row text-center d-flex justify-content-center">
+                <div class="col-lg-4 customBorder" ng-click="myFun(3)">
+                    <b> {{ PlayerValue[3] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(4)">
+                    <b> {{ PlayerValue[4] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(5)">
+                    <b> {{ PlayerValue[5] }} </b>
+                </div>
+            </div>
+
+            <div class="row text-center d-flex justify-content-center">
+                <div class="col-lg-4 customBorder" ng-click="myFun(6)">
+                    <b> {{ PlayerValue[6] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(7)">
+                    <b> {{ PlayerValue[7] }} </b>
+                </div>
+                <div class="col-lg-4 customBorder" ng-click="myFun(8)">
+                    <b> {{ PlayerValue[8] }} </b>
+                </div>
+            </div>
+
+            <div class="container text-center mt-3">
+                <button class="btn btn-primary" onclick="pageReload()">Retry</button>
+            </div>
+            <div class="text-center res">
+                <b> {{ result }} </b>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Angular_Script.js"></script>
+</body>
+</html>
